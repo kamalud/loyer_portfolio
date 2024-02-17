@@ -1,0 +1,71 @@
+body,
+html{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+img,
+a,
+label,
+i,
+span{
+    display: inline-block;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+a{
+    text-decoration: none;
+}
+ul,
+ol{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-size: 22px;
+    line-height: 32px;
+    margin: 0;
+}
+p{
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+    &.p2{
+        font-size: 24px;
+        line-height: 34px;
+    }
+}
+
+header,
+nav,
+div,
+section,
+aside,
+main,
+footer{
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 90px;
+    line-height: 100px;
+}
+h2{
+    font-size: 48px;
+    line-height: 58px;
+}
+h3{
+    font-size: 22px;
+    line-height: 32px;
+}
