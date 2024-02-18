@@ -14,6 +14,20 @@
   font-family: "poppins-extrabold";
   src: url("../fonts/poppins/Poppins-ExtraBold.ttf");
 }
+:root {
+  --border: 1px solid red;
+  --brand_light:#0F6E8C;
+  --brand_deep:#05546D;
+  --black_light:#4F4F4F;
+  --black_deep:#2D2F30;
+  --white:#FFF;
+  --app_font: "poppins-regular";
+  --poppins_regular: "poppins-regular";
+  --poppins_bold: "poppins-bold";
+  --poppins_semibold: "poppins-semibold";
+  --poppins_extrabold: "poppins-eextrabold";
+}
+
 body,
 html {
   margin: 0;
@@ -97,23 +111,34 @@ h3 {
   line-height: 32px;
 }
 
-:root {
-  --border: 1px solid red;
-  --brand_light:#0F6E8C;
-  --brand_deep:#05546D;
-  --black_light:#4F4F4F;
-  --black_deep:#2D2F30;
-  --white:#FFF;
-  --app_font: "poppins-regular";
-  --poppins_regular: "poppins-regular";
-  --poppins_bold: "poppins-bold";
-  --poppins_semibold: "poppins-semibold";
-  --poppins_extrabold: "poppins-eextrabold";
-}
-
 .container {
-  width: 1200px;
+  width: 1400px;
   margin: auto;
+}
+@media (min-width: 0px) and (max-width: 575.9px) {
+  .container {
+    width: calc(100% - 30px);
+  }
+}
+@media (min-width: 576px) and (max-width: 767.9px) {
+  .container {
+    width: 546px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.9px) {
+  .container {
+    width: 962px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399.9px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1370px;
+  }
 }
 
 header .header_body {
