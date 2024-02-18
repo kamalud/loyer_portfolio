@@ -1,3 +1,4 @@
+@import "./vendors/font";
 @import "./vendors/reset";
 @import "./vendors/variabls";
 
@@ -5,6 +6,7 @@
 @import "./components/heading_common";
 
 
+@import "./layouts/container.scss";
 @import "./layouts/header";
 @import "./layouts/nav";
 @import "./layouts/footer";

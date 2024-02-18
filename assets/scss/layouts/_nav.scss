@@ -1,5 +1,22 @@
 nav{
+    display: block;
     ul{
         display: flex;
+        margin: 0;
+        padding: 0;
+        gap: 55px;
+        li{
+            list-style-type: none;
+            a{
+                color: var(--black_deep);
+                text-transform: uppercase;
+                font-weight: 400;
+                &.active,
+                &:hover{
+                    font-family: var(--poppins_bold);
+                    // font-weight: 600;
+                }
+            }
+        }
     }
 }

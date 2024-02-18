@@ -4,6 +4,7 @@ html{
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+    font-family: var(--app_font);
 }
 img,
 a,
@@ -20,6 +21,9 @@ img{
 }
 a{
     text-decoration: none;
+    font-size: 14px;
+    line-height: 24px;
+    transform: .3s;
 }
 ul,
 ol{
