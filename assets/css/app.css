@@ -114,6 +114,7 @@ h3 {
 .container {
   width: 1400px;
   margin: auto;
+  border: var(--border);
 }
 @media (min-width: 0px) and (max-width: 575.9px) {
   .container {
@@ -151,8 +152,20 @@ header .header_body {
 header .header_body .log {
   width: 131px;
 }
+header .header_body .nav {
+  border: var(--border);
+}
 header .header_body .search {
-  font-size: 18px;
+  border: var(--border);
+}
+header .header_body .search a {
+  padding-top: 5px;
+}
+@media (min-width: 0px) and (max-width: 991.9px) {
+  header .header_body .nav,
+  header .header_body .search {
+    display: none;
+  }
 }
 
 nav {

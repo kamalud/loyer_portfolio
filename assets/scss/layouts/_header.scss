@@ -9,10 +9,19 @@ header{
         width: 131px;
      }
      .nav{
-       
+       border: var(--border);
      }
      .search{
-        font-size: 18px;
+        border: var(--border);
+        a{
+         padding-top: 5px;
+        }
+     }
+     @include custome_media(0px,991.9px){
+      .nav,
+      .search{
+         display: none;
+      }
      }
    }
 }
