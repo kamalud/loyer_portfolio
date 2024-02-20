@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./assets/css/app.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/all.min.css">
-    <link rel="stylesheet" href="./assets/css/all.css">
 </head>
 
 <body>
@@ -18,18 +17,26 @@
                 <div class="log">
                     <img src="assets//images/logo.png" alt="">
                 </div>
-                <nav class="nav">
-                    <ul>
-                        <li><a class="active" href="javascript:void">Home</a></li>
-                        <li><a href="javascript:void">About</a></li>
-                        <li><a href="javascript:void">Contact</a></li>
-                        <li><a href="javascript:void">Services</a></li>
-                        <li><a href="javascript:void">Blog</a></li>
-                    </ul>
-                </nav>
-                <div class="search">
-                    <a href="#" onclick="event.preventDefault()"><i class="fa-solid fa-magnifying-glass"></i></a>
-                </div>
+                 <div class="right_content">
+                    <nav class="nav">
+                        <ul id="nav_list">
+                            <li class="colse_nav"><a href="#" onclick="event.preventDefault(); nav_list.classList.remove('active');"><i class="fas fa-close"></i></a></li>
+                            <li><a class="active" href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </nav>
+                     <div class="extra_links">
+                        <div class="search">
+                            <a href="#" onclick="event.preventDefault();"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </div>
+                        <div class="nav_contrroll">
+                            <a href="" onclick="event.preventDefault(); nav_list.classList.add('active');"><i class="fas fa-bars"></i></a>
+                        </div>
+                     </div>
+                 </div>
             </div>
         </div>
     </header>

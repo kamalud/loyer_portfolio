@@ -55,7 +55,7 @@ a {
   text-decoration: none;
   font-size: 14px;
   line-height: 24px;
-  transform: 0.3s;
+  transition-duration: 0.3s;
 }
 
 ul,
@@ -149,36 +149,70 @@ header .header_body {
   align-items: center;
   padding: 25px 0;
 }
-header .header_body .log {
+header .header_body .log img {
   width: 131px;
 }
-header .header_body .nav {
-  border: var(--border);
+header .header_body .right_content {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
 }
-header .header_body .search {
-  border: var(--border);
+header .header_body .right_content .nav {
+  flex: 1;
+  display: grid;
+  align-items: center;
 }
-header .header_body .search a {
+header .header_body .right_content .extra_links {
+  display: flex;
+  gap: 10px;
+}
+header .header_body .right_content .extra_links .search a {
   padding-top: 5px;
+  font-size: 22px;
+}
+header .header_body .right_content .extra_links .nav_contrroll {
+  align-items: center;
+  display: none;
+}
+header .header_body .right_content .extra_links .nav_contrroll a i {
+  font-size: 22px;
 }
 @media (min-width: 0px) and (max-width: 991.9px) {
-  header .header_body .nav,
-  header .header_body .search {
-    display: none;
+  header .header_body .right_content {
+    justify-content: flex-end;
+  }
+  header .header_body .right_content .nav {
+    order: 2;
+    flex: unset;
+  }
+  header .header_body .right_content .nav ul li.colse_nav {
+    display: block;
+  }
+  header .header_body .right_content .extra_links {
+    order: 1;
+  }
+  header .header_body .right_content .extra_links .nav_contrroll {
+    display: grid;
   }
 }
 
-nav {
-  display: block;
-}
 nav ul {
   display: flex;
   margin: 0;
   padding: 0;
   gap: 55px;
+  justify-content: center;
 }
 nav ul li {
   list-style-type: none;
+}
+nav ul li.colse_nav {
+  text-align: right;
+  display: none;
+}
+nav ul li.colse_nav a i {
+  margin-right: 30px;
+  font-size: 28px;
 }
 nav ul li a {
   color: var(--black_deep);
@@ -187,6 +221,36 @@ nav ul li a {
 }
 nav ul li a.active, nav ul li a:hover {
   font-family: var(--poppins_bold);
+}
+
+@media (min-width: 0px) and (max-width: 991.9px) {
+  .nav {
+    position: relative;
+  }
+  .nav ul {
+    display: none;
+    height: 100vh;
+    position: fixed;
+    flex-direction: column;
+    width: 30vw;
+    min-width: 275px;
+    gap: 10px;
+    top: 0;
+    padding: 23px 0;
+    right: 0;
+    justify-content: flex-start;
+    padding-left: 30px;
+    text-align: left;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.411);
+    background-color: rgba(255, 253, 253, 0.8901960784);
+  }
+  .nav ul.active {
+    display: block;
+  }
+  .nav ul ul li a {
+    font-size: 17px;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
