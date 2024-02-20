@@ -1,6 +1,9 @@
 @import "./vendors/font";
-@import "./vendors/reset";
 @import "./vendors/variabls";
+@import "./mixins/mediaSceen";
+@import "./vendors/reset";
+
+
 
 @import "./components/button";
 @import "./components/heading_common";
