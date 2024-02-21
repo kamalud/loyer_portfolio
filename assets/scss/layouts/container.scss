@@ -1,7 +1,6 @@
 .container{
   width: 1400px;
   margin: auto;
-  border: var(--border);
 
   @include xs(){
     width: calc(100% - 30px);

@@ -114,7 +114,6 @@ h3 {
 .container {
   width: 1400px;
   margin: auto;
-  border: var(--border);
 }
 @media (min-width: 0px) and (max-width: 575.9px) {
   .container {
