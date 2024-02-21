@@ -14,6 +14,10 @@
   font-family: "poppins-extrabold";
   src: url("../fonts/poppins/Poppins-ExtraBold.ttf");
 }
+@font-face {
+  font-family: "play-regular";
+  src: url("../fonts/playfor/PlayfairDisplay-Regular.ttf");
+}
 :root {
   --border: 1px solid red;
   --brand_light:#0F6E8C;
@@ -21,11 +25,13 @@
   --black_light:#4F4F4F;
   --black_deep:#2D2F30;
   --white:#FFF;
+  --gray:#888C8C;
   --app_font: "poppins-regular";
   --poppins_regular: "poppins-regular";
   --poppins_bold: "poppins-bold";
   --poppins_semibold: "poppins-semibold";
   --poppins_extrabold: "poppins-eextrabold";
+  --play_regular: "play-regular";
 }
 
 body,
@@ -168,6 +174,7 @@ header .header_body .right_content .extra_links {
 header .header_body .right_content .extra_links .search a {
   padding-top: 5px;
   font-size: 22px;
+  color: var(--black_deep);
 }
 header .header_body .right_content .extra_links .nav_contrroll {
   align-items: center;
@@ -175,6 +182,7 @@ header .header_body .right_content .extra_links .nav_contrroll {
 }
 header .header_body .right_content .extra_links .nav_contrroll a i {
   font-size: 22px;
+  color: var(--black_deep);
 }
 @media (min-width: 0px) and (max-width: 991.9px) {
   header .header_body .right_content {
@@ -186,6 +194,9 @@ header .header_body .right_content .extra_links .nav_contrroll a i {
   }
   header .header_body .right_content .nav ul li.colse_nav {
     display: block;
+  }
+  header .header_body .right_content .nav ul li a i {
+    color: var(--black_deep);
   }
   header .header_body .right_content .extra_links {
     order: 1;
@@ -250,6 +261,70 @@ nav ul li a.active, nav ul li a:hover {
   .nav ul ul li a {
     font-size: 17px;
   }
+}
+#banner .banner_content {
+  display: grid;
+  grid-template-columns: 750px 1fr;
+  padding: 100px 0px 70px;
+}
+#banner .banner_content .banner_details .top h1 {
+  font-family: var(--play_regular);
+  color: var(--brand_deep);
+  font-size: 90px;
+  line-height: 108px;
+}
+#banner .banner_content .banner_details .top p {
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0, 5px;
+  max-width: 500px;
+  margin-top: 40px;
+}
+#banner .banner_content .banner_details .top a {
+  padding: 29px 36px;
+  background-color: var(--brand_deep);
+  border-radius: 8px;
+  color: var(--white);
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 52px;
+}
+#banner .banner_content .banner_details .bottom {
+  margin-top: 95px;
+}
+#banner .banner_content .banner_details .bottom p {
+  columns: var(--gray);
+  font-size: 22px;
+  line-height: 30px;
+}
+#banner .banner_content .banner_details .bottom .sponser_list {
+  display: grid;
+  grid-template-columns: 105px 105px;
+  padding-top: 30px;
+  gap: 25px;
+}
+#banner .banner_content .banner_details .bottom .sponser_list a img {
+  width: 100%;
+  height: 100%;
+}
+#banner .banner_content .banner_image {
+  position: relative;
+}
+#banner .banner_content .banner_image .img {
+  width: 540px;
+  position: absolute;
+  left: -266px;
+  top: 15px;
+}
+@media (min-width: 992px) and (max-width: 1199.9px) {
+  #banner .banner_content .banner_image .img {
+    left: -351px;
+    top: 219px;
+  }
+}
+#banner .banner_content .banner_image .img img {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=app.css.map */
