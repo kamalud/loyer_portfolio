@@ -1,71 +1,147 @@
-#banner{
-    .banner_content{
+#banner {
+    .banner_content {
         display: grid;
         grid-template-columns: 750px 1fr;
         padding: 100px 0px 70px;
-    .banner_details{
-        .top{
-          h1{
-            font-family: var(--play_regular);
-            color: var(--brand_deep);
-            font-size: 90px;
-            line-height: 108px;
-          }
-          p{
-            font-size: 24px;
-            line-height: 38px;
-            letter-spacing: 0,5px;
-            max-width: 500px;
-            margin-top: 40px;
-          }
-          a{
-            padding: 29px 36px;
-            background-color: var(--brand_deep);
-            border-radius: 8px;
-            color: var(--white);
-            font-size: 16px;
-            text-transform: uppercase;
-            margin-top: 52px;
-          }
+
+        @include xs() {
+            grid-template-columns: 1fr;
+            padding: 30px 0px 70px;
         }
-        .bottom{
-            margin-top: 95px;
-             p{
-                columns: var(--gray);
-                font-size: 22px;
-                line-height: 30px;
-             }
-             .sponser_list{
-                display: grid;
-                grid-template-columns: 105px 105px;
-                padding-top: 30px;
-                gap: 25px;
-                    a{
-                        img{
-                            width: 100%;
-                            height: 100%;
+
+        @include sm() {
+            grid-template-columns: 1fr;
+            padding: 30px 0px 70px;
+        }
+        @include md() {
+            grid-template-columns: 736px 1fr;
+            padding: 50px 0px 70px;
+        }
+        @include md() {
+            padding: 50px 0px 70px;
+        }
+
+        .banner_details {
+            .top {
+                h1 {
+                    font-family: var(--play_regular);
+                    color: var(--brand_deep);
+                    font-size: 90px;
+                    line-height: 108px;
+
+                    @include xs() {
+                        font-size: 33px;
+                        line-height: 48px;
+                    }
+                    @include sm() {
+                        font-size: 60px;
+                        line-height: 75px;
+                    }
+                }
+
+                p {
+                    font-size: 24px;
+                    line-height: 38px;
+                    letter-spacing: 0, 5px;
+                    max-width: 500px;
+                    margin-top: 40px;
+                    @include xs(){
+                        font-size: 17px;
+                        line-height: 26px;
+                    }
+                }
+
+                a {
+                    padding: 29px 36px;
+                    background-color: var(--brand_deep);
+                    border-radius: 8px;
+                    color: var(--white);
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    margin-top: 52px;
+                    @include xs(){
+                        padding: 19px 26px;
+                        border-radius: 8px;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .bottom {
+                margin-top: 95px;
+
+                p {
+                    columns: var(--gray);
+                    font-size: 22px;
+                    line-height: 30px;
+                    @include xs(){
+                        font-size: 17px;
+                        line-height: 27px;
+                        display: grid;
+                        margin-top: -73px;
+                    }
+                    @include md() {
+                        width: 320px;
+                    }
+                }
+
+                .sponser_list {
+                    display: grid;
+                    grid-template-columns: 105px 105px;
+                    padding-top: 30px;
+                    gap: 25px;
+
+                    a {
+                        img {
+                            width: 40px;
+                            height: 40px;
+                            @include xs(){
+                                margin: auto;
+                            }
                         }
                     }
-                
-             }
-        }
-    }
-    .banner_image{
-        position: relative;
-        .img{
-            width: 540px;
-            position: absolute;
-            left: -266px;
-            top: 15px;
-            @include lg(){
-                left: -351px;
-                top: 219px;
-            }
-            img{
-             width: 100%;
-             height: 100%;
+
+                }
             }
         }
+
+        .banner_image {
+            position: relative;
+
+            .img {
+                width: 540px;
+                position: absolute;
+                left: -266px;
+                top: 15px;
+
+                @include xs() {
+                    width: 100%;
+                    position: unset;
+                    margin-top: 40px;
+                }
+                @include sm() {
+                    width: 100%;
+                    position: unset;
+                    margin-top: 40px;
+                }
+
+
+                @include lg() {
+                    left: -351px;
+                    top: 219px;
+                }
+
+                @include md() {
+                    width: 360px;
+                    left: -392px;
+                    top: 245px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
     }
-}
 }
